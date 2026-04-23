@@ -1,6 +1,6 @@
-# 🚀 LEMP Stack Project (Ubuntu 20.04)
+#  LEMP Stack Project (Ubuntu 20.04)
 
-## 📌 Introduction
+## Introduction
 
 The LEMP stack is a widely used web development stack consisting of **Linux, Nginx (Engine-X), MySQL, and PHP**. It is designed to serve dynamic web applications efficiently and is commonly used in production environments due to its high performance and scalability.
 
@@ -23,7 +23,7 @@ It also includes a working PHP–MySQL integration test application.
 
 ---
 
-## ⚙️ Tech Stack
+##  Tech Stack
 
 - **Operating System:** Ubuntu 20.04 (Vagrant VM)
 - **Web Server:** Nginx
@@ -32,7 +32,7 @@ It also includes a working PHP–MySQL integration test application.
 
 ---
 
-## 📦 Installation Steps Summary
+##  Installation Steps Summary
 
 ### 1. Install Nginx
 
