@@ -40,21 +40,28 @@ It also includes a working PHP–MySQL integration test application.
 sudo apt update
 sudo apt install nginx -y
 ```
+<img width="2551" height="1345" alt="Screenshot 2026-04-05 190134" src="https://github.com/user-attachments/assets/976f489f-3d60-44e3-adad-dca946e6ef57" />
+<img width="1553" height="340" alt="Screenshot 2026-04-05 190119" src="https://github.com/user-attachments/assets/d00f4173-48c7-4aba-81e9-ac424af55952" />
 
 Enable firewall
 ```
 sudo ufw allow 'Nginx HTTP'
 ```
+<img width="1020" height="124" alt="Screenshot 2026-04-05 190230" src="https://github.com/user-attachments/assets/39f3b6a8-56ee-4037-a34b-0ced11201c1c" />
 
 ### 2. Install MySQL
 ```
 sudo apt install mysql-server -y
 sudo mysql_secure_installation
 ```
+<img width="2369" height="490" alt="Screenshot 2026-04-23 124142" src="https://github.com/user-attachments/assets/a7b663c8-3ca9-4827-983c-422d1d199947" />
+
 ### 3. Install PHP and PHP-FPM
 ```
 sudo apt install php-fpm php-mysql -y
 ```
+<img width="1446" height="225" alt="Screenshot 2026-04-23 124209" src="https://github.com/user-attachments/assets/938ab2c9-788c-422d-8086-e0df6b6706c9" />
+
 ### 4. Configure Nginx for PHP
 
 Edit default config:
@@ -139,6 +146,15 @@ echo "</ul>";
 ```
 http://localhost:8080/todo.php
 ```
+
+<img width="2528" height="969" alt="Screenshot 2026-04-23 124104" src="https://github.com/user-attachments/assets/3465e4ba-2bf6-43ca-a787-faa2011d765b" />
+<img width="2369" height="490" alt="Screenshot 2026-04-23 124142" src="https://github.com/user-attachments/assets/ceed7c15-9a99-4633-9721-8fefeee9c99a" />
+<img width="1446" height="225" alt="Screenshot 2026-04-23 124209" src="https://github.com/user-attachments/assets/0978245c-63bd-464c-9ed9-581887042227" />
+<img width="1967" height="1074" alt="Screenshot 2026-04-23 124247" src="https://github.com/user-attachments/assets/f85aa805-e1e0-4c24-9d62-52bbe46a60b9" />
+<img width="2078" height="1081" alt="Screenshot 2026-04-23 124322" src="https://github.com/user-attachments/assets/d5cf9333-52a5-4350-868b-5e5e6ba6e206" />
+<img width="1028" height="1272" alt="Screenshot 2026-04-23 124354" src="https://github.com/user-attachments/assets/4b2b05f6-779d-4b91-9606-e53295de718f" />
+
+
 ### Features
 - Fully working LEMP stack
 - PHP execution via Nginx + PHP-FPM
@@ -161,21 +177,6 @@ sudo rm /var/www/html/todo.php
 - Server-side scripting (PHP)
 - Backend database integration
 - Linux server management basics
-
-
-<img width="2242" height="600" alt="image" src="https://github.com/user-attachments/assets/408fc018-49b2-40d6-a6ef-c999d63261b6" />
-
-<img width="2528" height="970" alt="image" src="https://github.com/user-attachments/assets/433732a1-3587-47ef-a1c0-7d46c43298cc" />
-
-<img width="2370" height="490" alt="image" src="https://github.com/user-attachments/assets/496c7085-3f27-4c5d-9db8-346101426bbe" />
-
-<img width="1446" height="226" alt="image" src="https://github.com/user-attachments/assets/76ae7707-e010-4439-9d9d-b3d193faede0" />
-
-<img width="1968" height="1074" alt="image" src="https://github.com/user-attachments/assets/f941d65e-9461-4e16-887b-6faaae7324fb" />
-
-<img width="2078" height="1082" alt="image" src="https://github.com/user-attachments/assets/2af5d047-dd52-43b2-be92-85eea2caacab" />
-
-<img width="1028" height="1272" alt="image" src="https://github.com/user-attachments/assets/4b9d0492-2c43-4a5c-8fbe-7205ea1db8ce" />
 
 
 
