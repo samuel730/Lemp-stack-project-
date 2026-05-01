@@ -1,14 +1,33 @@
-#  LEMP Stack Project (Ubuntu 20.04)
+#  LEMP Stack Project 
 
 ## Introduction
 
-The LEMP stack is a widely used web development stack consisting of **Linux, Nginx (Engine-X), MySQL, and PHP**. It is designed to serve dynamic web applications efficiently and is commonly used in production environments due to its high performance and scalability.
+The LEMP stack is a combination of open-source software used to build and deploy dynamic web applications. It consists of:
 
-In this project, a complete LEMP stack environment was built on an Ubuntu 20.04 server using a Vagrant virtual machine. The setup includes the installation and configuration of Nginx as the web server, MySQL as the database system, and PHP-FPM for processing dynamic PHP scripts.
+- Linux – Operating system
+- Nginx – Web server
+- MySQL – Database management system
+- PHP – Server-side scripting language
 
-The project also demonstrates how these components interact together to serve dynamic web pages and connect to a database through PHP, resulting in a fully functional backend web application environment.
+This project demonstrates how to install, configure, and integrate these technologies on an Ubuntu 20.04 server using a Vagrant virtual machine.
+
+The goal is to create a fully functional web server capable of processing PHP files and interacting with a MySQL database.
 
 ---
+## Objectives
+
+By completing this project, you will:
+*Understand how a LEMP stack works
+* Install and configure Nginx, MySQL, and PHP
+* Connect PHP to a MySQL database
+* Serve dynamic web content through a browser
+
+⸻
+
+## Environment Setup
+* OS: Ubuntu 20.04 (Vagrant VM)
+* Access: SSH terminal
+* Web access: http://localhost:8080
 
 ##  Project Overview
 
@@ -35,7 +54,7 @@ It also includes a working PHP–MySQL integration test application.
 ##  Installation Steps Summary
 
 ### 1. Install Nginx
-
+Nginx is a web server responsible for handling incoming HTTP requests and serving web pages.
 ```bash
 sudo apt update
 sudo apt install nginx -y
@@ -47,20 +66,31 @@ Enable firewall
 ```
 sudo ufw allow 'Nginx HTTP'
 ```
-<img width="1020" height="124" alt="Screenshot 2026-04-05 190230" src="https://github.com/user-attachments/assets/39f3b6a8-56ee-4037-a34b-0ced11201c1c" />
+<img width="1020" height="124" alt="Screenshot 2026-04-05 190230" src="https://github.com/user-attachments/assets/39f3b6a8-56ee-4037-a34b-0ced11201c1c" /> 
+Explanation
+
+This ensures Nginx is installed and actively running on the server.
 
 ### 2. Install MySQL
+MySQL is used to store and manage application data.
 ```
 sudo apt install mysql-server -y
 sudo mysql_secure_installation
 ```
 <img width="2369" height="490" alt="Screenshot 2026-04-23 124142" src="https://github.com/user-attachments/assets/a7b663c8-3ca9-4827-983c-422d1d199947" />
+Explanation
+
+This step removes insecure default settings and protects your database server.
 
 ### 3. Install PHP and PHP-FPM
+PHP processes dynamic content, while PHP-FPM allows Nginx to communicate with PHP.
 ```
 sudo apt install php-fpm php-mysql -y
 ```
 <img width="1446" height="225" alt="Screenshot 2026-04-23 124209" src="https://github.com/user-attachments/assets/938ab2c9-788c-422d-8086-e0df6b6706c9" />
+Explanation
+- php-fpm: Handles PHP processing
+- php-mysql: Allows PHP to connect to MySQL
 
 ### 4. Configure Nginx for PHP
 
@@ -78,8 +108,12 @@ location ~ \.php$ {
     fastcgi_pass unix:/var/run/php/php7.2-fpm.sock;
 }
 ```
+Explanation
 
-Reload Nginx:
+This tells Nginx:
+- How to process PHP files
+- Where PHP-FPM is located
+##### Reload Nginx:
 
 ```
 sudo nginx -t
@@ -99,6 +133,10 @@ Access:
 ```
 http://localhost:8080/info.php
 ```
+#### Expected Result
+
+A PHP information page confirms PHP is working correctly.
+
 ### MySQL + PHP Integration (Todo App)
 #### Database Setup
 ```
